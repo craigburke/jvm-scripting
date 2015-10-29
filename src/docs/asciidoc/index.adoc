@@ -1,0 +1,27 @@
+:icons: font
+:imagesdir: images
+:sourcedir: snippets
+
+include::slides/title.adoc[]
+
+include::slides/about-me.adoc[]
+
+include::slides/dsl.adoc[]
+
+include::slides/groovy-dsl.adoc[]
+
+include::slides/fundamentals.adoc[]
+
+include::slides/functional.adoc[]
+ 
+include::slides/dynamic.adoc[]
+
+include::slides/dane.adoc[]
+
+include::slides/doc-builder.adoc[] 
+
+include::slides/gorm.adoc[]
+
+include::slides/resources.adoc[] 
+
+include::slides/end.adoc[]

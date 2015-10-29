@@ -1,0 +1,58 @@
+== More Examples
+[role="subheading"]
+Groovy DSLs
+
+=== Grails domain class
+
+[.source.groovy]
+----
+class User {
+  
+  String firstName
+  String lastName
+  Date birthDate
+	
+  static constraints = {
+    firstName blank:false
+    lastName blank:false
+    birthDate nullable:false
+  }
+	
+}
+----
+
+=== Bower Installer
+
+[.source.groovy]
+----
+bower {
+    installBase = 'src/assets/bower'
+
+    'angular'('1.4.x')
+	
+    'angular-animate'('1.4.x') {
+        source 'angular-animate.js' >> '/angular/modules/'
+    }
+	
+    'bootstrap'('3.3.x') {
+        source 'dist/css/*.min.css' >> 'styles/'
+        source 'dist/fonts/**' >> 'fonts/'
+        excludes 'jquery'
+    }	
+}
+----
+
+=== Groovy Document Builder
+
+[.source.groovy]
+----
+document {
+  paragraph 'Hello Groovy Pittsburgh!', font: [size: 36.pt]
+		
+  paragraph(font: [size: 33.pt, color: '#6598A9']) {
+    text 'I '
+    text 'Love ', font: [bold: true, size: 40.pt, color: '#FF0000']
+    text 'Groovy'
+  }
+}
+----

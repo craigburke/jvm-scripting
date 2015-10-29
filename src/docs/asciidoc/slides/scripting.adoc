@@ -1,0 +1,25 @@
+== Scripting
+
+[source,java,role='fragment']
+.Java code to print a String
+----
+public class ScriptClass {
+
+  public static void main(String[] args) {
+    System.out.println("Hello World");
+  }
+
+}
+----
+
+[source,groovy,role='fragment']
+.Equivalent Groovy Code
+----
+println 'Hello World'
+----
+
+[source,bash,role='fragment']
+.Groovy version can be run without compiling
+----
+groovy script.groovy
+----

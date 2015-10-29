@@ -1,0 +1,79 @@
+== Groovy Fundamentals
+
+=== Groovy Features
+
+[.step]
+* Simple Syntax (Less Noise)
+* Operator Overloading
+* Scripting Support
+* Meta-Programming
+
+=== Getting started
+
+* icon:apple[]icon:linux[] SDKMan! 
+* icon:windows[] Windows Installer 
+
+[source,bash,role='fragment']
+.SDKMan! 
+----
+curl -s http://get.sdkman.io | bash
+sdk install groovy
+----
+
+[role='fragment']
+* Windows Installer 
+** http://www.groovy-lang.org/download.html
+
+=== Power Assert
+
+The assert keyword take a boolean expression and throws an exception if it's false.
+
+[.source.groovy,role='fragment']
+----
+assert true
+assert false // throws exception
+----
+
+=== Groovy Truth
+
+Any Object can be coerced into a boolean and used in a boolean expression.
+
+=== Equality
+
+Unlike Java the *==* in Groovy uses *equals()* to determine equality.
+
+
+=== Syntactic Sugar
+
+[source,groovy,role='fragment']
+.Maps and lists
+----
+Map map = [language: 'Groovy']
+List list = ['foo', 'bar']
+----
+
+[source,groovy,role='fragment']
+.Optional parenthesis
+----
+// equivilent to: say(hello).to('Craig')
+
+----
+
+[source,groovy,role='fragment']
+.Command chaining and optional parenthesis
+----
+// equivilent to: say(hello).to('Craig')
+say hello to 'Craig' 
+----
+
+[source,groovy,role='fragment']
+.Named arguments
+----
+class Note {
+  static from(Map args, String name) {
+    println "${name} said ${args.message}"
+  }
+}
+
+Note.from 'Craig Burke', message: 'Hey, how are you?'
+----
